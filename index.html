@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Task</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Section containing the page header and the download/reset buttons -->
+    <header>
+      <img src="assets/logo.png" alt="Star wars logo" />
+      <h1 id="title_text">Select 3 Characters!</h1>
+      <div id="download_options">
+        <h1 id="selection_text"></h1>
+        <button class="btn btn-green" onclick="api.download()">Download</button
+        ><button class="btn btn-red" onclick="api.reset()">Reset</button>
+      </div>
+    </header>
+    <!-- Container for the main section of the page -->
+    <div id="cont">
+      <!-- Placement div for the character cards -->
+      <div id="cards_container"></div>
+
+      <!-- Arrow icons -->
+      <img
+        onclick="api.backPage()"
+        id="arrow_left"
+        src="assets/arrowLeft.svg"
+        alt="arrow"
+      />
+      <img
+        onclick="api.nextPage()"
+        id="arrow_right"
+        src="assets/arrowLeft.svg"
+        alt="arrow"
+      />
+      <!-- Page numbers -->
+      <h2>Page <span id="pg_number">1</span>/10</h2>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

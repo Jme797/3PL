@@ -1,0 +1,141 @@
+/* 
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
+ */
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+/* Remove all padding and margin and set default font */
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+/* set background on the body */
+body {
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styling for page header */
+header {
+  width: 100%;
+  text-align: center;
+}
+header img {
+  height: 120px;
+  margin: 20px 0;
+}
+/* Styling for title text and page numbers */
+h1,
+h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  text-align: center;
+}
+h2 {
+  margin: 10px 0 40px 0;
+}
+/* Styling for the character cards and container */
+#cards_container {
+  width: 90%;
+  margin: 0 5%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 1;
+}
+.card {
+  margin: 20px 10px;
+}
+.img {
+  width: 130px;
+  height: 130px;
+  vertical-align: top;
+  display: inline-block;
+}
+.card_body {
+  width: 240px;
+  height: 130px;
+  background-color: gray;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  position: relative;
+  font-family: "Carrois Gothic SC", sans-serif;
+}
+.card_body p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding-right: 20px;
+  box-sizing: border-box;
+  text-align: right !important;
+}
+/* Styling for the button that wraps each card */
+#cards_container button {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0;
+  cursor: pointer;
+}
+
+/* Active class state for card body */
+.card_body_active {
+  background-color: #a4cc70;
+}
+/* Styling for dowload and reset buttons */
+.btn {
+  width: 150px;
+  height: 40px;
+  margin: 5px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn-red {
+  background-color: red;
+}
+.btn-red:hover {
+  background-color: rgb(139, 3, 3);
+}
+.btn-green {
+  background-color: rgb(132, 197, 34);
+}
+.btn-green:hover {
+  background-color: rgb(82, 119, 26);
+}
+#download_options {
+  display: none;
+}
+#cont {
+  position: relative;
+}
+/* Styling for page arrows */
+#arrow_left {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#arrow_right {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%) rotate(180deg);
+  cursor: pointer;
+}
