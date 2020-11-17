@@ -20,6 +20,9 @@ class SWAPI_API {
       .then((json) => {
         this.data = json.results;
         this.displayData();
+      })
+      .catch((e) => {
+        console.log(e);
       });
   }
   /* function that renders 9 cards with the data returned from api - default image used as api doesn't provide one */
@@ -96,6 +99,7 @@ class SWAPI_API {
   }
   /* Decreases the page number and calls displayData() and getData() to update page */
   backPage() {
+    console.log("back");
     if (this.page != 1) {
       this.page -= 1;
       this.displayData();
@@ -105,7 +109,8 @@ class SWAPI_API {
   }
   /* Increases the page number and calls displayData() and getData() to update page */
   nextPage() {
-    if (this.page != 10) {
+    console.log("forward");
+    if (this.page != 8) {
       this.page += 1;
       this.getData();
     }
