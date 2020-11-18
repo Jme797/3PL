@@ -73,6 +73,7 @@ class SWAPI_API {
       /* If 3 characters selected show buttons to allow for download and update text*/
       if (this.people.length == 3) {
         this.allowDownload();
+        api.download();
       }
     }
   }
@@ -155,6 +156,7 @@ class SWAPI_API {
   }
   /* Function called by button to start download */
   download() {
+    let downloadLink = document.getElementById("downlaod_link");
     /* Calls the createCSVData() to create the string for the download */
     this.createCSVData();
 
@@ -162,14 +164,18 @@ class SWAPI_API {
     setTimeout(() => {
       /* Download file */
       let encodedUri = encodeURI(this.csvContent);
-      window.open(encodedUri);
+      downloadLink.setAttribute("href", encodedUri);
+      downloadLink.setAttribute("download", "characters.csv");
     }, 1000);
     /* Calls reset function to reset the UI */
-    this.reset();
+    /* this.reset(); */
   }
 }
 
 /* Triggers the instance of the Swapi Api Class */
 window.onload = () => {
   api = new SWAPI_API();
+};
+document.getElementById("downlaod_link").onclick = () => {
+  api.reset();
 };

@@ -105,6 +105,8 @@ h2 {
   border: none;
   cursor: pointer;
   text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
 }
 .btn-red {
   background-color: red;
